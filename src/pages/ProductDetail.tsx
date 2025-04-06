@@ -22,6 +22,20 @@ const ProductDetail = () => {
     .filter(p => p.category === product?.category && p.id !== id)
     .slice(0, 4);
   
+  // Toy image mapping - replace real weapon images with toy versions
+  const getToyImage = (category: string) => {
+    switch (category) {
+      case 'firearms':
+        return 'https://images.unsplash.com/photo-1501286353178-1ec871214838?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Monkey with banana
+      case 'ammunition':
+        return 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Penguins
+      case 'accessories':
+      case 'gear':
+      default:
+        return 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Kitten
+    }
+  };
+  
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -66,7 +80,7 @@ const ProductDetail = () => {
             {/* Product Images */}
             <div className="bg-muted rounded-md overflow-hidden">
               <img 
-                src={product.image} 
+                src={getToyImage(product.category)} 
                 alt={product.name}
                 className="w-full h-auto object-cover aspect-square"
               />
@@ -144,7 +158,7 @@ const ProductDetail = () => {
                     <div className="bg-card rounded-md overflow-hidden border border-border transition-all duration-300 group-hover:border-secondary">
                       <div className="aspect-square bg-muted overflow-hidden">
                         <img 
-                          src={relatedProduct.image} 
+                          src={getToyImage(relatedProduct.category)} 
                           alt={relatedProduct.name}
                           className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                         />
