@@ -7,7 +7,7 @@ import { products, Product } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ArrowLeft, Package, Shield, Truck } from 'lucide-react';
+import { ArrowLeft, Package, Shield, Truck, MessageSquare } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const ProductDetail = () => {
@@ -40,10 +40,10 @@ const ProductDetail = () => {
     );
   }
   
-  const handleAddToCart = () => {
+  const handleRequestQuote = () => {
     toast({
-      title: "Added to Cart",
-      description: `${product.name} has been added to your cart.`,
+      title: "Quote Requested",
+      description: `Your quote request for ${product.name} has been submitted.`,
       duration: 3000,
     });
   };
@@ -81,15 +81,12 @@ const ProductDetail = () => {
               <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
               <div className="text-lg font-medium text-muted-foreground mb-4">{product.brand}</div>
               
-              <div className="text-2xl font-bold mb-6">${product.price.toLocaleString()}</div>
-              
               <p className="text-muted-foreground mb-6">{product.description}</p>
               
               <div className="flex flex-col gap-4 mb-8">
-                <Button onClick={handleAddToCart} className="bg-secondary hover:bg-secondary/90">
-                  Add to Cart
+                <Button onClick={handleRequestQuote} className="bg-secondary hover:bg-secondary/90 flex items-center gap-2">
+                  <MessageSquare size={18} /> Request Quote
                 </Button>
-                <Button variant="outline">Request Quote</Button>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -156,7 +153,6 @@ const ProductDetail = () => {
                         <div className="text-sm text-muted-foreground mb-1">{relatedProduct.brand}</div>
                         <h3 className="font-medium mb-2 group-hover:text-secondary transition-colors">{relatedProduct.name}</h3>
                         <div className="flex justify-between items-center">
-                          <span className="text-foreground font-semibold">${relatedProduct.price.toLocaleString()}</span>
                           <Badge variant="outline" className="text-xs">{relatedProduct.category}</Badge>
                         </div>
                       </div>

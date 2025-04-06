@@ -34,7 +34,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <div className="text-sm text-muted-foreground mb-1">{product.brand}</div>
           <h3 className="font-medium mb-2 group-hover:text-secondary transition-colors">{product.name}</h3>
           <div className="flex justify-between items-center">
-            <span className="text-foreground font-semibold">${product.price.toLocaleString()}</span>
             <Badge variant="outline" className="text-xs">{product.category}</Badge>
           </div>
         </div>
