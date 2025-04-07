@@ -21,25 +21,25 @@ export const categories = [
   {
     id: "firearms",
     name: "Firearms",
-    image: "https://images.unsplash.com/photo-1584281362576-5b3f7e9702f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     count: 6,
   },
   {
     id: "ammunition",
     name: "Ammunition",
-    image: "https://images.unsplash.com/photo-1595590424283-b8f526a2f2b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     count: 4,
   },
   {
     id: "accessories",
     name: "Accessories",
-    image: "https://images.unsplash.com/photo-1595075917659-3550d0162f85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     count: 2,
   },
   {
     id: "gear",
     name: "Tactical Gear",
-    image: "https://images.unsplash.com/photo-1553486335-21b5e27f3197?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     count: 3,
   },
 ];

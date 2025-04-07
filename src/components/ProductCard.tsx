@@ -22,18 +22,18 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   const { toast } = useToast();
 
-  // Toy military vehicle images mapping for each category
+  // Black and green military themed images for each category
   const getToyImage = (category: string) => {
     switch (category) {
       case 'firearms':
-        return 'https://images.unsplash.com/photo-1534732806146-b3bf32171b48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Green toy army tank
+        return 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Black circuit board
       case 'ammunition':
-        return 'https://images.unsplash.com/photo-1487260211189-670c54da558d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Toy army truck
+        return 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Black and gray laptop
       case 'accessories':
-        return 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Green toy jeep
+        return 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Black and white photo
       case 'gear':
       default:
-        return 'https://images.unsplash.com/photo-1559762717-99c81ac85459?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Army helicopter toy
+        return 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Black and red building
     }
   };
 
