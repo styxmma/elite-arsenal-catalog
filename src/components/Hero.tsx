@@ -7,15 +7,14 @@ import { ArrowRight } from 'lucide-react';
 const Hero = () => {
   return (
     <div className="relative bg-black">
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      {/* Dark overlay - reduced opacity */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
       
-      {/* Background image */}
+      {/* Background image - removed grayscale filter */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/lovable-uploads/33fe15cc-8d1d-4182-8653-048826e14e65.png')",
-          filter: "grayscale(20%)"
+          backgroundImage: "url('/lovable-uploads/33fe15cc-8d1d-4182-8653-048826e14e65.png')"
         }}
       ></div>
       
