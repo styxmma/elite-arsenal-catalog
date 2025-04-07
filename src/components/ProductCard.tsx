@@ -22,17 +22,18 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   const { toast } = useToast();
 
-  // Toy image mapping - replace real weapon images with toy versions
+  // Toy military vehicle images mapping for each category
   const getToyImage = (category: string) => {
     switch (category) {
       case 'firearms':
-        return 'https://images.unsplash.com/photo-1501286353178-1ec871214838?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Monkey with banana
+        return 'https://images.unsplash.com/photo-1534732806146-b3bf32171b48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Green toy army tank
       case 'ammunition':
-        return 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Penguins
+        return 'https://images.unsplash.com/photo-1487260211189-670c54da558d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Toy army truck
       case 'accessories':
+        return 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Green toy jeep
       case 'gear':
       default:
-        return 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Kitten
+        return 'https://images.unsplash.com/photo-1559762717-99c81ac85459?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'; // Army helicopter toy
     }
   };
 
