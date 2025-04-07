@@ -10,11 +10,11 @@ const Hero = () => {
       {/* Dark overlay - reduced opacity */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
       
-      {/* Background image - removed grayscale filter */}
+      {/* Background image - battlefield scene */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/lovable-uploads/33fe15cc-8d1d-4182-8653-048826e14e65.png')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80')"
         }}
       ></div>
       
